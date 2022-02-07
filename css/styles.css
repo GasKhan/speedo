@@ -264,7 +264,7 @@ a{
 /******************products*********************/
 
 .products {
-	margin-bottom: 100px;
+	margin-bottom: 35px;
 }
 .products__inner {}
 .products__header {
@@ -420,4 +420,41 @@ a{
 }
 .product__colors-color_3{
 	background-color: #6666cc;
+}
+
+/*****************shopping*********************/
+
+.shopping {
+	background-image: url(../images/shopping.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: 50% 100%;
+}
+.shopping__wrapper{
+	display: flex;
+	/*max-width: 50%;*/
+}
+.shopping__inner {
+	display: flex;
+	flex: 0 0 40%;
+	flex-direction: column;
+	padding: 150px 140px 150px 15px;
+	text-transform: uppercase;
+}
+.shopping__only {
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+.shopping__title {
+	font-size: 30px;
+	line-height: 36px;
+	margin: 0 0 25px 0;
+}
+.shopping__link {
+	font-family: Cairo, sans-serif;
+	font-size: 18px;
+	color: #666666;
+}
+.shopping__link:hover {
+	text-decoration: underline;
 }
