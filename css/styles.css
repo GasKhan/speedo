@@ -494,9 +494,59 @@ a{
 }
 .offers__button {}
 .offers__image {
-	flex: 0 0 50%;
+	flex: 0 1 50%;
 	border-top: 3px solid #000;
 	border-right: 3px solid #000;
 	border-bottom: 3px solid #000;
 	z-index: -1;
+}
+
+
+/************************form*********************/
+
+.form {
+	margin-bottom: 200px;
+}
+.form__inner {
+	display: flex;
+	align-items: baseline;
+}
+.form__text {
+	flex: 1 1 50%;
+	font-family:Cairo, sans-serif;
+	text-transform: uppercase;
+	padding-left: 15px;
+}
+.form__intputs {
+	flex: 1 1 50%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: flex-start;
+	padding-right: 30px;
+}
+.form__email {
+	padding: 20px;
+	width: 280px;
+	font-family:Cairo, sans-serif;
+	color: #6e6e6e;
+	text-transform: uppercase;
+	border: 1px solid #000;
+	margin-bottom: 5px;
+	outline-color: #55dddd;
+}
+.form__email:hover {
+	border-color: #55dddd;
+}
+.form__submit {
+	background-color: #000;
+	color: #fff;
+	padding: 20px 30px;
+	text-transform: uppercase;
+	border: 1px solid #000;
+}
+.form__submit:hover {
+	border-color: #55dddd;
+	cursor: pointer;
+	text-decoration: underline;
 }
