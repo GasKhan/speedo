@@ -95,7 +95,7 @@ a{
 }
 .header__list-item {
 	font-size: 16px;
-	line-height: 30px;
+	line-height: 20px;
 	text-transform: uppercase;
 	color: #6e6e6e;
 	transition: all 0.3s linear;
@@ -104,23 +104,31 @@ a{
 }
 .header__list-item:hover {
 	color: #000;
-	transform: scale(1.3);
+	text-decoration: underline;
 	cursor: pointer;
 }
 .header__list-top {
-	
+	display: flex;
+
 }
 .header__inner-list {
 	position: absolute;
-	background-color: #e6eef0;
-	width: 100%;
+	background-color: rgba(110,110,110,0.1);
+	display: flex;
+	flex-direction: column;
+	min-width: 100%;
 }
 .header__inner-item {
 	border: 1px solid #333;
-	border-radius: 3%;
+	border-radius: 2%;
 	padding: 2px;
 	font-size: 14px;
 	line-height: 16px;
+	display: flex;
+	justify-content: center;
+}
+.header__inner-item a:hover {
+	text-decoration: underline;
 }
 .header__search {
 

@@ -1,15 +1,17 @@
-ёconst headerOpeners = document.querySelectorAll('.header__list-top');
-const header = document.querySelector('.header');
-for (let opener of headerOpeners) {
-	opener.addEventListener('click', () => {
-		const opened = opener.nextElementSibling;
+const headerOpeners = document.querySelectorAll('.header__list-top');
 
-		if(opened.classList.contains('opened')) {
-			opened.classList.toggle('opened');
-}else{
-		header.querySelectorAll('.opened')
-		                      .forEach((item) => item.classList.remove('opened'));
-		opened.classList.add('opened');
+for (let opener of headerOpeners) {
+  opener.addEventListener('click', () => {
+    const opened = opener.nextElementSibling;
+    document.querySelector('.header')
+            .querySelectorAll('.opened')
+            .forEach((item) => item.classList.remove('opened'));
+    opened.classList.toggle('opened');
+  })
 }
-	})
-}
+
+document.addEventListener('click', () => {
+  if (!event.target.closest('.header__list-top')){
+    document.querySelectorAll('.opened')
+    .forEach((item) => item.classList.remove('opened'))};
+})
