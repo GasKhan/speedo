@@ -37,12 +37,18 @@ let maxHeight = blockHeight * sliderContents.length;
 
 let position = 0;
 sliderPrev.addEventListener('click', function() {
+  let blockHeight = sliderBlock.getBoundingClientRect().height;
+  let maxHeight = blockHeight * sliderContents.length;
+
   position += blockHeight;
   position = Math.min(position, 0);
   sliderInner.style.marginTop = position + 'px';
 });
 
 sliderNext.addEventListener('click', function() {
+  let blockHeight = sliderBlock.getBoundingClientRect().height;
+  let maxHeight = blockHeight * sliderContents.length;
+  
   position -= blockHeight;
   position = Math.max(position, -maxHeight + blockHeight);
   sliderInner.style.marginTop = position + 'px';
