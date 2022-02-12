@@ -259,7 +259,17 @@ a{
 	display: none;
 	width: 30px;
 	height: 20px;
-	background-color: #333;
+	/*background-color: #333;*/
+	position: relative;
+}
+.header__accordeon:before {
+	font-family: icomoon;
+	content: '\e9bd';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
 }
 @media(max-width :650px) {
 	.header__accordeon {
