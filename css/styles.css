@@ -1,3 +1,34 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../icons/fonts/icomoon.eot?a3z8ap');
+  src:  url('../icons/fonts/icomoon.eot?a3z8ap#iefix') format('embedded-opentype'),
+    url('../icons/fonts/icomoon.ttf?a3z8ap') format('truetype'),
+    url('../icons/fonts/icomoon.woff?a3z8ap') format('woff'),
+    url('../icons/fonts/icomoon.svg?a3z8ap#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+
+
+.icon-search_icon:before {
+  content: "\f002";
+}
+.icon-twitter_icon:before {
+  content: "\f099";
+}
+.icon-angle-right_icon:before {
+  content: "\f105";
+}
+.icon-angle-down_icon:before {
+  content: "\f107";
+}
+.icon-facebook-official_icon:before {
+  content: "\f230";
+}
+
+
 /*@font-face {
 	font-family: 'Cairo';
 	src: url('../fonts/Cairo Regular.eot');
@@ -125,7 +156,7 @@ a{
 .header__nav {
 	/*min-width: 60%;*/
 	flex: 1 0 70%;
-	margin-right: 20px;
+	margin-right: 50px;
 }
 @media(max-width :650px) {
 	.header__nav {
@@ -163,9 +194,15 @@ a{
 	text-decoration: underline;
 	cursor: pointer;
 }
+.header__list-top_link:after {
+	font-family: icomoon;
+	content: '\f107';
+	position: absolute;
+	right: -17px;
+}
 .header__list-top {
 	display: flex;
-
+	position: relative;
 }
 .header__inner-list {
 	position: absolute;
@@ -187,10 +224,34 @@ a{
 	text-decoration: underline;
 }
 .header__search {
+	flex: 0 0 20%;
+	display: flex;
+	justify-content: end;
 	margin:15px 1px;
+	position: relative;
 	/*background-color: #fff;*/
 }
-.header__input {}
+.header__search:before {
+	font-family: icomoon;
+	content: "\f002";
+	position: absolute;
+	top: 1px;
+	left : 55px;
+}
+@media(max-width :1340px) {
+	.header__search:before {
+		left: 5px;
+	}
+}
+@media(max-width :1024px) {
+	.header__search:before {
+		left: -13px;
+	}
+}
+.header__input {
+	border: none;
+	/*padding-left: 5px;*/
+}
 .header__inner-list {
 	display: none;
 }
@@ -398,6 +459,13 @@ a{
 	min-width: 150px;
 	text-transform: uppercase;
 	transition: all 0.5s ease;
+	position: absolute;
+}
+.black__button:after {
+	font-family: icomoon;
+	content: "\f105";
+	position: relative;
+	left: 15px;
 }
 @media(max-width :680px) {
 	.black__button {
@@ -570,6 +638,7 @@ a{
 	font-size: 10px;
 	line-height: 24px;
 	text-transform: uppercase;
+	position: relative;
 }
 @media(max-width: 1024px) {
 	.bests__item-link {
@@ -578,6 +647,12 @@ a{
 }
 .best__item-link:hover {
 	text-decoration: underline;
+}
+.bests__item-link:after {
+	font-family: icomoon;
+	content: '\f105';
+	position: absolute;
+	left: 110%;
 }
 
 
@@ -879,6 +954,7 @@ a{
 	font-family: Cairo, sans-serif;
 	font-size: 18px;
 	color: #666666;
+	position: relative;
 }
 @media(max-width: 550px) {
 	.shopping__link{
@@ -887,6 +963,17 @@ a{
 }
 .shopping__link:hover {
 	text-decoration: underline;
+}
+.shopping__link:after{
+	font-family: icomoon;
+	content: '\f105';
+	position: absolute;
+	left: 105px;
+}
+@media(max-width: 550px) {
+	.shopping__link:after {
+		left: 75px;
+	}
 }
 
 /*******************offers************************/
@@ -1198,8 +1285,7 @@ a{
 .footer__social-link {
 	width: 20px;
 	height: 20px;
-	border-radius: 50%;
-	background-color: #6e6e6e;
+	position: relative;
 }
 .footer__social-link:first-child {
 	margin-right: 10px;
@@ -1207,5 +1293,17 @@ a{
 .footer__social-link:hover {
 	cursor: pointer;
 }
-.footer__social-facebook {}
-.footer__social-twitter {}
+.footer__social-facebook:before {
+	font-family: icomoon;
+	content: '\f230';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+.footer__social-twitter:before {
+	font-family: icomoon;
+	content: '\f099';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
