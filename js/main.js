@@ -1,4 +1,4 @@
-// accordeon
+// navigation
 const headerOpeners = document.querySelectorAll('.header__list-top');
 
 for (let opener of headerOpeners) {
@@ -48,8 +48,17 @@ sliderPrev.addEventListener('click', function() {
 sliderNext.addEventListener('click', function() {
   let blockHeight = sliderBlock.getBoundingClientRect().height;
   let maxHeight = blockHeight * sliderContents.length;
-  
+
   position -= blockHeight;
   position = Math.max(position, -maxHeight + blockHeight);
   sliderInner.style.marginTop = position + 'px';
+});
+
+// accordeon
+
+let accordeon = document.querySelector('.header__accordeon');
+let nav = document.querySelector('.header__nav');
+
+accordeon.addEventListener('click', function() {
+  nav.classList.toggle('show__nav');
 });

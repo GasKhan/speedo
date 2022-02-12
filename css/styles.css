@@ -64,16 +64,51 @@ a{
 	max-width: 1170px;
 	margin: 0 auto;
 }
+/********************header*******************/
 
 .header {
 	padding: 100px 135px;
 }
-
+@media(max-width :1440px) {
+	.header {
+		padding: 75px 85px;
+	}
+}
+@media(max-width :1024px) {
+	.header {
+		padding: 50px 60px;
+	}
+}
+@media(max-width :762px) {
+	.header {
+		padding: 30px 40px;
+	}
+}
+@media(max-width :425px) {
+	.header {
+		padding: 20px 30px;
+	}
+}
 .header__top {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 95px;
+}
+@media(max-width :1024px) {
+	.header__top {
+		margin-bottom: 60px;
+	}
+}
+@media(max-width :762px) {
+	.header__top {
+		margin-bottom: 40px;
+	}
+}
+@media(max-width :762px) {
+	.header__top {
+		margin-bottom: 20px;
+	}
 }
 .header__logo {
 	font-size: 35px;
@@ -85,22 +120,43 @@ a{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: wrap-reverse;
 }
 .header__nav {
-	min-width: 60%;
+	/*min-width: 60%;*/
+	flex: 1 0 70%;
+	margin-right: 20px;
+}
+@media(max-width :650px) {
+	.header__nav {
+		display: none;
+	}
 }
 .header__list {
 	display: flex;
 	justify-content: space-between;
+
 }
+@media(max-width :650px) {
+	.header__list {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
 .header__list-item {
 	font-size: 16px;
 	line-height: 20px;
 	text-transform: uppercase;
 	color: #6e6e6e;
 	transition: all 0.3s linear;
-
+	margin-right: 10px;
 	position: relative;
+}
+@media(max-width :650px) {
+	.header__list-item:not(:first-child) {
+		margin-top: 5px;
+	}
 }
 .header__list-item:hover {
 	color: #000;
@@ -131,13 +187,27 @@ a{
 	text-decoration: underline;
 }
 .header__search {
+	margin:15px 1px;
 	/*background-color: #fff;*/
 }
 .header__input {}
 .header__inner-list {
 	display: none;
 }
-
+.header__accordeon {
+	display: none;
+	width: 30px;
+	height: 20px;
+	background-color: #333;
+}
+@media(max-width :650px) {
+	.header__accordeon {
+		display: flex;
+	}
+}
+.show__nav {
+	display: block;
+}
 .opened{
 	display: block;
 }
@@ -608,6 +678,9 @@ a{
 .product:hover .product__image {
 	height: 260px;
 }
+.product:hover .product__sizes {
+	margin-top: 0;
+}
 @media(max-width: 1066px) {
 	.product:hover .product__image {
 	height: 240px;
@@ -691,6 +764,7 @@ a{
 	color: #00cccc;
 }
 .product__sizes {
+	margin-top: 500px;
 	margin-bottom: 20px;
 }
 .product__sizes-title {}
