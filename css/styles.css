@@ -448,7 +448,9 @@ a{
 	font-weight: normal;
 	color: #6e6e6e;
 	min-height: auto;
-	margin-bottom: 20px
+	margin-bottom: 20px;
+	overflow: auto;
+	max-height: 50%;
 }
 @media(max-width :680px) {
 	.slider__text {
@@ -763,12 +765,10 @@ a{
 .product:hover .product__image {
 	height: 260px;
 }
-<<<<<<< HEAD
 .product:hover .product__sizes {
 	margin-top: 0;
 }
-=======
->>>>>>> 873e4ec92adbc8053deca127b1e81839bb6dde88
+
 @media(max-width: 1066px) {
 	.product:hover .product__image {
 	height: 240px;
